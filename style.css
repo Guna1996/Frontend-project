@@ -95,7 +95,7 @@
 .prod_count {
     position: absolute;
     top: 5px;
-    right: 55px;
+    right: 48px;
     z-index: 1;
     position: fixed;
 }

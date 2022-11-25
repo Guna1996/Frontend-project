@@ -125,13 +125,17 @@ function addItemToCart(title, price, imageSrc) {
     cartRow.classList.add('cart-row')
     var cartItems = document.getElementsByClassName('cart-items')[0]
     var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
+    var cartItemQuantity = cartItems.getElementsByClassName('cart-quantity-input')
     for (var i = 0; i < cartItemNames.length; i++) {
         if (cartItemNames[i].innerText == title) {
-            alert('This item is already added to the cart')
+            const sample = document.querySelector("#name");
+            sample.style.display = "block";
+            cartItemQuantity[i].value = parseInt(cartItemQuantity[i].value) + 1;
             return
         }
     }
-    alert("added successfully")
+    const sample = document.querySelector("#name");
+    sample.style.display = "block";
     var cartRowContents = `
         <div class="cart-item cart-column">
             <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
@@ -152,16 +156,19 @@ function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName('cart-items')[0]
     var cartRows = cartItemContainer.getElementsByClassName('cart-row')
     var total = 0
+    var totalCount = 0
     for (var i = 0; i < cartRows.length; i++) {
         var cartRow = cartRows[i]
         var priceElement = cartRow.getElementsByClassName('cart-price')[0]
         var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
         var price = parseFloat(priceElement.innerText.replace('$', ''))
         var quantity = quantityElement.value
+        totalCount =  totalCount + 1* quantity
         total = total + (price * quantity)
     }
     total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
+    document.getElementsByClassName('added_item_count')[0].innerText = + totalCount
 }
 
 function removeCartItem(event) {
