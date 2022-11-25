@@ -1,0 +1,44 @@
+
+   [
+        {
+            "img": "images/5.jpg",
+            "name": "Ice cream With Tiramisu Flavor",
+            "price": "12.00"
+        },
+        {
+            "img": "images/8.jpg",
+            "name": "Scrachatela Ice Cream",
+            "price": "36.00"
+        },
+        {
+            "img": "images/7.jpg",
+            "name": "Cream With strawberry",
+            "price": "15.00"
+        },
+        {
+            "img": "images/5.jpg",
+            "name": "Cappuccino Ice Cream",
+            "price": "18.00"
+        },
+
+        {
+            "img": "images/3.jpg",
+            "name": "Ice cream Covered with Chocolate & Nuts",
+            "price": "60.00"
+        },
+        {
+            "img": "images/1.jpg",
+            "name": "Colourful Popsicles Isolated",
+            "price": "54.00"
+        },
+        {
+            "img": "images/2.jpg",
+            "name": "Ice cream Covered with Chocolate",
+            "price": "27.00"
+        },
+        {
+            "img": "images/4.jpg",
+            "name": "Colorful Popsicles Isolated",
+            "price": "69.00"
+        }
+    ]
